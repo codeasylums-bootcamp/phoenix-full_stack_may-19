@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+    <title>Renting</title>
+    <meta name="description" content="">	
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="icon" href="img/favicon/favicon-32x32.png" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+	
+	<!-- CSS
+	================================================== -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Prettyphoto -->
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="css/cd-hero.css">
+	<!-- Style Swicther -->
+	<link id="style-switch" href="css/presets/preset3.css" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<style>
+			.button {
+			  border-radius: 4px;
+			  background-color: red;
+			  border: none;
+			  color: #FFFFFF;
+			  text-align: center;
+			  font-size: 28px;
+			  padding: 20px;
+			  width: 200px;
+			  transition: all 0.5s;
+			  cursor: pointer;
+			  margin: 5px;
+			}
+			
+			.button span {
+			  cursor: pointer;
+			  display: inline-block;
+			  position: relative;
+			  transition: 0.5s;
+			}
+			
+			.button span:after {
+			  content: '\00bb';
+			  position: absolute;
+			  opacity: 0;
+			  top: 0;
+			  right: -20px;
+			  transition: 0.5s;
+			}
+			
+			.button:hover span {
+			  padding-right: 25px;
+			}
+			
+			.button:hover span:after {
+			  opacity: 1;
+			  right: 0;
+			}
+			 
+			.columns
+			{
+				float: left;
+                width: 33.33%;
+                padding: 0 10px;
+			}
+			
+			
+			</style>
+			
+
+</head>
+	
+<body>
+	
+        <div class="body-inner">
+                <!-- Header start -->
+                <header id="header" class="navbar-fixed-top header4" role="banner">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Logo start -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="navbar-brand">
+                                    <!-- <a href="index.html">
+                                        <img class="img-responsive" src="images/logo2.png" alt="logo">
+                                    </a>  -->
+                                    <h2 style="color: red"><b>Nest Seekers</b></h2>
+                                </div>                   
+                            </div><!--/ Logo end -->
+                            <nav class="collapse navbar-collapse clearfix" role="navigation">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown active">
+                                           <a href="index-4.html">Home <i class="fa fa-angle-down"></i></a>
+                                           <!-- <div class="dropdown-menu">
+                                            <ul>
+                                                <li><a href="index.html">Home 1</a></li>
+                                                <li><a href="index-2.html">Home 2</a></li>
+                                                <li><a href="index-3.html">Home 3</a></li>
+                                                <li class="active"><a href="index-4.html">Home 4</a></li>
+                                            </ul>
+                                        </div> -->
+                                    </li>
+                                    <li class="dropdown">
+                                           <a href="index.html">Sign-Up Admin <i class="fa fa-angle-down"></i></a>
+                                           <!-- <div class="dropdown-menu">
+                                               COMPANY
+                                            <ul>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="service.html">Services</a></li>
+                                                <li><a href="career.html">Career</a></li>
+                                                <li><a href="testimonial.html">Testimonials</a></li>
+                                                <li><a href="faq.html">Faq</a></li>
+                                            </ul>
+                                        </div> -->
+                                    </li>
+                                    <li class="dropdown">
+                                           <a href="user.html">Sign-Up User <i class="fa fa-angle-down"></i></a>
+                                           <!-- <div class="dropdown-menu">
+                                               PORTFOLIO
+                                            <ul>
+                                                <li><a href="portfolio-classic.html">Portfolio Classic</a></li>
+                                                <li><a href="portfolio-static.html">Portfolio Static</a></li>
+                                                <li><a href="portfolio-item.html">Portfolio Single</a></li>
+                                            </ul>
+                                        </div> -->
+                                    </li>
+                                    <li class="dropdown">
+                                           <a href="#">Login <i class="fa fa-angle-down"></i></a>
+                                           <!-- <div class="dropdown-menu">
+                                               PAGES
+                                            <ul>
+                                                   <li><a href="team.html">Our Team</a></li>
+                                                   <li><a href="about2.html">About Us - 2</a></li>
+                                                   <li><a href="service2.html">Services - 2</a></li>
+                                                   <li><a href="service-single.html">Services Single</a></li>
+                                                   <li><a href="pricing.html">Pricing Table</a></li>
+                                                   <li><a href="404.html">404 Page</a></li>
+                                            </ul>
+                                        </div> -->
+                                    </li>
+                                    <!-- <li class="dropdown">
+                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
+                                           <div class="dropdown-menu">
+                                            <ul>
+                                                    <li><a href="blog-rightside.html">Blog with Sidebar</a></li>
+                                                <li><a href="blog-item.html">Blog Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown">
+                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+                                           <div class="dropdown-menu">
+                                            <ul>
+                                                    <li><a href="typography.html">Typography</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                        </div>
+                                    </li> -->
+                                    
+									<li><a href="contact.html">Contact</a></li>
+									<li><input type="text" placeholder="Search.." style="padding-top: 5px;padding-left: 100px;margin-top: 20px;border:2px solid black"></li>
+									<li><button type="submit" style="margin-top: 20px;color:black;border:2px solid black;height: 33px"><i class="fa fa-search"></i></button></li>
+                                </ul>
+                            </nav><!--/ Navigation end -->
+                        </div><!--/ Row end -->
+                    </div><!--/ Container end -->
+                </header><!--/ Header end -->
+		 
+
+
+		  
+		 
+     <!-- Features start -->
+	 <br><br>
+	 
+	<section id="service" class="service">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+					<div class="service-content">
+						<span class="service-image" id ="img_0"></span>
+						<h3 id="Location_0"> </h3>
+						<p>
+							<h5 id="Avail_0"></h5>
+							<h5 id="Type_0"></h5>
+							<h5 id="Built_0"></h5>
+							<h5 id="Pref_0"></h5>
+							<h5 id="Price_0"></h5>
+							<h5 id="Spl_0"></h5>
+						</p>
+						<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_0" >
+						
+						</div>
+						  
+					</div>
+				</div><!--/ End first service -->
+
+				<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".8s" >
+					<div class="service-content">
+							<span class="service-image" id ="img_1"></span>
+							<h3 id="Location_1"> </h3>
+							<p>
+								<h5 id="Avail_1"></h5>
+								<h5 id="Type_1"></h5>
+								<h5 id="Built_1"></h5>
+								<h5 id="Pref_1"></h5>
+								<h5 id="Price_1"></h5>
+								<h5 id="Spl_1"></h5>
+							</p>
+							<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_1" ></div>
+					</div>
+					
+                </div>
+                <!--/ End Second features -->
+
+				<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay="1.1s">
+					<div class="service-content">
+							<span class="service-image" id ="img_2"></span>
+							<h3 id="Location_2"> </h3>
+							<p>
+								<h5 id="Avail_2"></h5>
+								<h5 id="Type_2"></h5>
+								<h5 id="Built_2"></h5>
+								<h5 id="Pref_2"></h5>
+								<h5 id="Price_2"></h5>
+								<h5 id="Spl_2"></h5>
+							</p>
+							<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_2" ></div>
+							
+					</div>
+				</div>
+				</div>
+                <!--/ End Third features -->
+
+				<div class="row">
+						<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+							<div class="service-content">
+								<span class="service-image" id ="img_3"></span>
+								<h3 id="Location_3"> </h3>
+								<p>
+									<h5 id="Avail_3"></h5>
+									<h5 id="Type_3"></h5>
+									<h5 id="Built_3"></h5>
+									<h5 id="Pref_3"></h5>
+									<h5 id="Price_3"></h5>
+									<h5 id="Spl_3"></h5>
+								</p>
+								<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_3" ></div>
+								
+							</div>
+						</div><!--/ End first service -->
+		
+						<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".8s" >
+							<div class="service-content">
+									<span class="service-image" id ="img_4"></span>
+									<h3 id="Location_4"> </h3>
+									<p>
+										<h5 id="Avail_4"></h5>
+										<h5 id="Type_4"></h5>
+										<h5 id="Built_4"></h5>
+										<h5 id="Pref_4"></h5>
+										<h5 id="Price_4"></h5>
+										<h5 id="Spl_4"></h5>
+									</p>
+									<div  style="color:black;border:2px solid red;text-align: center" class="container" id="pop_4" ></div>
+									
+							</div>
+							
+						</div>
+						<!--/ End Second features -->
+		
+						<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay="1.1s">
+							<div class="service-content">
+									<span class="service-image" id ="img_5"></span>
+									<h3 id="Location_5"> </h3>
+									<p>
+										<h5 id="Avail_5"></h5>
+										<h5 id="Type_5"></h5>
+										<h5 id="Built_5"></h5>
+										<h5 id="Pref_5"></h5>
+										<h5 id="Price_5"></h5>
+										<h5 id="Spl_5"></h5>
+									</p>
+									<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_5" ></div>
+									  
+							</div>
+							</div>
+
+
+							<div class="row">
+									<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+										<div class="service-content">
+											<span class="service-image" id ="img_6"></span>
+											<h3 id="Location_6"> </h3>
+											<p>
+												<h5 id="Avail_6"></h5>
+												<h5 id="Type_6"></h5>
+												<h5 id="Built_6"></h5>
+												<h5 id="Pref_6"></h5>
+												<h5 id="Price_6"></h5>
+												<h5 id="Spl_6"></h5>
+											</p>
+											<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_6" ></div>
+											  
+										</div>
+									</div><!--/ End first service -->
+					
+									<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".8s" >
+										<div class="service-content">
+												<span class="service-image" id ="img_7"></span>
+												<h3 id="Location_7"> </h3>
+												<p>
+													<h5 id="Avail_7"></h5>
+													<h5 id="Type_7"></h5>
+													<h5 id="Built_7"></h5>
+													<h5 id="Pref_7"></h5>
+													<h5 id="Price_7"></h5>
+													<h5 id="Spl_7"></h5>
+												</p>
+												<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_7" ></div>
+										</div>
+										
+									</div>
+									<!--/ End Second features -->
+					
+									<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay="1.1s">
+										<div class="service-content">
+												<span class="service-image" id ="img_8"></span>
+												<h3 id="Location_8"> </h3>
+												<p>
+													<h5 id="Avail_8"></h5>
+													<h5 id="Type_8"></h5>
+													<h5 id="Built_8"></h5>
+													<h5 id="Pref_8"></h5>
+													<h5 id="Price_8"></h5>
+													<h5 id="Spl_8"></h5>
+												</p>
+												<div style="color:black;border:2px solid red;text-align: center" class="container" id="pop_8" ></div>
+												
+										</div>
+										</div>
+</div> 
+	<script>
+		console.log("hello1")
+		 axios.get("http://localhost:3000/properties")
+		 .then(res=>{
+			 //console.log("hello")
+			 var i;
+			 for(i=0;i<3;i++)
+			 {
+			 console.log(res.data);
+			 document.getElementById(`Location_${i}`).innerHTML=`${res.data[i].Location}`;
+			 document.getElementById(`Avail_${i}`).innerHTML=`<b style="color: red">Availability</b>: ${res.data[i].Availability}`;
+			 document.getElementById(`Type_${i}`).innerHTML=`<b style="color: red">Apartment Type</b> : ${res.data[i].Apartment_Type}`;
+			 document.getElementById(`Built_${i}`).innerHTML=`<b style="color: red">Built-Up</b> : ${res.data[i].Built_Up} Sq.Ft`;
+			 document.getElementById(`Pref_${i}`).innerHTML=`<b style="color: red">Preference</b> : ${res.data[i].Preference}`;
+			 document.getElementById(`Price_${i}`).innerHTML=`<b style="color: red">Price</b> : Rs. ${res.data[i].Price}/M`;
+			 document.getElementById(`Spl_${i}`).innerHTML=`<b style="color: red">Special Features </b>: ${res.data[i].Special_Features}`;
+			 document.getElementById(`img_${i}`).innerHTML=`<img class="img-responsive" height="300px" width="350px" src="images/${res.data[i].picname}" alt="" />`;
+			
+			//  document.getElementById(`pop_${i}`).innerHTML=`<a href="#" data-toggle="popover" title="Contact Details" data-content="Some content inside the popover">Toggle popover</a>`;
+			 }
+
+
+			 for(var i=3;i<6;i++)
+			 {
+				console.log(res.data);
+			 document.getElementById(`Location_${i}`).innerHTML=`${res.data[i].Location}`;
+			 document.getElementById(`Avail_${i}`).innerHTML=`<b style="color: red">Availability</b>: ${res.data[i].Availability}`;
+			 document.getElementById(`Type_${i}`).innerHTML=`<b style="color: red">Apartment Type</b> : ${res.data[i].Apartment_Type}`;
+			 document.getElementById(`Built_${i}`).innerHTML=`<b style="color: red">Built-Up</b> : ${res.data[i].Built_Up} Sq.Ft`;
+			 document.getElementById(`Pref_${i}`).innerHTML=`<b style="color: red">Preference</b> : ${res.data[i].Preference}`;
+			 document.getElementById(`Price_${i}`).innerHTML=`<b style="color: red">Price</b> : Rs. ${res.data[i].Price}/M`;
+			 document.getElementById(`Spl_${i}`).innerHTML=`<b style="color: red">Special Features </b>: ${res.data[i].Special_Features}`;
+			 document.getElementById(`img_${i}`).innerHTML=`<img class="img-responsive" height="300px" width="350px" src="images/${res.data[i].picname}" alt="" />`;
+			 }	
+			 
+			 for(var i=6;i<9;i++)
+			 {
+				console.log(res.data);
+			 document.getElementById(`Location_${i}`).innerHTML=`${res.data[i].Location}`;
+			 document.getElementById(`Avail_${i}`).innerHTML=`<b style="color: red">Availability</b>: ${res.data[i].Availability}`;
+			 document.getElementById(`Type_${i}`).innerHTML=`<b style="color: red">Apartment Type</b> : ${res.data[i].Apartment_Type}`;
+			 document.getElementById(`Built_${i}`).innerHTML=`<b style="color: red">Built-Up</b> : ${res.data[i].Built_Up} Sq.Ft`;
+			 document.getElementById(`Pref_${i}`).innerHTML=`<b style="color: red">Preference</b> : ${res.data[i].Preference}`;
+			 document.getElementById(`Price_${i}`).innerHTML=`<b style="color: red">Price</b> : Rs. ${res.data[i].Price}/M`;
+			 document.getElementById(`Spl_${i}`).innerHTML=`<b style="color: red">Special Features </b>: ${res.data[i].Special_Features}`;
+			 document.getElementById(`img_${i}`).innerHTML=`<img class="img-responsive" height="300px" width="350px" src="images/${res.data[i].picname}" alt="" />`;
+			 }
+			})
+
+			
+            var xhr=new XMLHttpRequest();
+            xhr.addEventListener('load',function(){
+             
+              var k= (JSON.parse(this.responseText));
+			//   console.log("Hi");
+              //console.log(k);
+			//var n=k.Array[0].Name;
+			//console.log(k[0].Name);
+			for(var f=0;f<3;f++)
+			{
+			document.getElementById(`pop_${f}`).innerHTML=`<p><h5><b><u>CONTACT</u></b></h5>${k[f].Name}<br>${k[f].Email}<br>${k[f].Phone}</p>`;
+            }})
+            xhr.open('GET','http://localhost:3000/adminlogin',true);
+            xhr.send();
+
+
+
+			var xhr=new XMLHttpRequest();
+            xhr.addEventListener('load',function(){
+             
+              var k= (JSON.parse(this.responseText));
+			//   console.log("Hi");
+              //console.log(k);
+			//var n=k.Array[0].Name;
+			//console.log(k[0].Name);
+			for(var f=3;f<6;f++)
+			{
+			document.getElementById(`pop_${f}`).innerHTML=`<p><h5><b><u>CONTACT</u></b></h5>${k[f].Name}<br>${k[f].Email}<br>${k[f].Phone}</p>`;
+            }})
+            xhr.open('GET','http://localhost:3000/adminlogin',true);
+            xhr.send();
+
+			
+			var xhr=new XMLHttpRequest();
+            xhr.addEventListener('load',function(){
+             
+              var k= (JSON.parse(this.responseText));
+			//   console.log("Hi");
+              //console.log(k);
+			//var n=k.Array[0].Name;
+			//console.log(k[0].Name);
+			for(var f=6;f<9;f++)
+			{
+			document.getElementById(`pop_${f}`).innerHTML=`<p><h5><b><u>CONTACT</u></b></h5>${k[f].Name}<br>${k[f].Email}<br>${k[f].Phone}</p>`;
+            }})
+            xhr.open('GET','http://localhost:3000/adminlogin',true);
+            xhr.send();
+			
+			
+	</script> 
+
+
+	<!-- Template custom -->
+	<script type="text/javascript" src="js/custom.js"></script>
+	</div><!-- Body inner end -->
+	<script src="more.js"></script>
+</body>					
+</html>

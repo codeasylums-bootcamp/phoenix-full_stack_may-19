@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form method="POST" action="http://localhost:3000/picdata">
+            <input type="text" name="picname" id="picname" />
+            <button type="submit" value="submit">submit</button>
+        </form>
+        </div>
+    </body>
+    <script>
+            var a=window.localStorage.getItem('a');
+            console.log(a);
+            document.getElementById("picname").value = a;
+
+console.log( document.getElementById("picname").value);
+
+
+
+/*let xhr = new XMLHttpRequest;
+xhr.addEventListener('load',function(){
+    let response = (JSON.parse(this.responseText));
+    console.log(response);
+    console.log(response[0].picname);
+});
+xhr.open('GET',"http://localhost:3000/picdata");
+xhr.send();*/
+
+
+
+
+
+    </script>
+</html>
